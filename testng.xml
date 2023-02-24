@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite" parallel="tests" thread-count="3">
+	 <test name="Read Data">
+    <classes>
+      <class name="TestRunner.ReadDataTest"/>
+    </classes>
+  </test>
+  <test name="Add Comment Test">
+    <classes>
+      <class name="TestRunner.AddCommentTest"/>
+    </classes>
+  </test>
+ 
+</suite>
