@@ -13,8 +13,9 @@ public class WriteToExcelStepDefinition {
 	private ExcelSheetReader excelSheetReader;
 	private ExcelSheetWriter excelSheetWriter;
 	
-	@Given("A Workbook named {string} and sheetname as{string} and Row number as{int} is read")
+	@Given("A Workbook named {string} and sheetname as{string} and Row number as {int} is read")
     public void a_workbook_with_name_and_sub_sheet_name_and_row_number_is_read(String workbookName, String subSheetName, int rowNumber) throws Exception {
+		System.out.println("rowNumber from feature file is "+rowNumber);
 		excelSheetReader = new ExcelSheetReader(workbookName, subSheetName, rowNumber);
 		excelSheetWriter = new ExcelSheetWriter(workbookName, subSheetName, rowNumber);
 		ExcelSheetManager.setExcelSheetReader(excelSheetReader);

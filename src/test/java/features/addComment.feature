@@ -22,7 +22,7 @@ Feature: Adding Comment to Jira Issues
 
   Scenario Outline: Add Comment to Jira Bug with Invalid Data
     Given Row number as<RowNumber> is read
-    Then Read comment as"<COMMENT>" to create an invalid addCommentToBug payload as"addCommentToBug"
+    Then Read comment as"<COMMENT>" to create an invalid addCommentToBug payload as"invalidAddComment"
     When "AddComment" request is sent with the "Post" HTTP method on IssueID as "<ISSUEID>"
     Then Validate that the response status code is "400"
 

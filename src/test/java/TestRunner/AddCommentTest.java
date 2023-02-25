@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @Test
 @CucumberOptions(features = "src/test/java/features/addComment.feature", plugin = { "pretty",
-		"json:target/jsonReports/cucumber-report.json" }, glue = { "stepDefinitions" },dryRun=true)
+		"json:target/jsonReports/cucumber-report.json" }, glue = { "stepDefinitions" },dryRun=false)
 
 public class AddCommentTest extends AbstractTestNGCucumberTests {
 
