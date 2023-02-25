@@ -18,3 +18,16 @@
 2023-02-25 17:42:03,613 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RestAssuredResponseImpl@36525ab
 2023-02-25 17:42:03,761 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RequestSpecificationImpl@7bf65e0f
 2023-02-25 17:42:04,320 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RestAssuredResponseImpl@5f3f3d00
+2023-02-25 17:51:55,157 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 17:51:55,510 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 17:52:10,117 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10561
+2023-02-25 17:52:11,538 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10562
+2023-02-25 17:52:12,754 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10563
+2023-02-25 18:04:51,340 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:04:51,508 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:06:35,277 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:06:35,460 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:07:37,890 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:07:38,117 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:08:23,942 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:08:24,135 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM

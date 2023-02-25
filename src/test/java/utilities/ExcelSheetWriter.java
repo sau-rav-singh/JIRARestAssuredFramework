@@ -91,6 +91,37 @@ public class ExcelSheetWriter {
 		cell.setCellValue(value);
 		saveFile();
 	}
+	public void deleteRecords(String columnName) throws IOException {
+	    Objects.requireNonNull(columnName, "Column name cannot be null.");
+	    if (columnName.isBlank()) {
+	        throw new IllegalArgumentException("Column name cannot be empty or blank.");
+	    }
+
+	    XSSFRow headerRow = sheet.getRow(0);
+	    int columnCount = headerRow.getLastCellNum();
+	    int columnIndex = -1;
+	    for (int i = 0; i < columnCount; i++) {
+	        String cellValue = headerRow.getCell(i).getStringCellValue();
+	        if (cellValue.equalsIgnoreCase(columnName)) {
+	            columnIndex = i;
+	            break;
+	        }
+	    }
+	    if (columnIndex == -1) {
+	        throw new IllegalArgumentException("Column " + columnName + " does not exist in the sheet.");
+	    }
+
+	    for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+	        XSSFRow row = sheet.getRow(i);
+	        if (row != null) {
+	            XSSFCell cell = row.getCell(columnIndex);
+	            if (cell != null) {
+	                row.removeCell(cell);
+	            }
+	        }
+	    }
+	    saveFile();
+	}
 
 	public void saveFile() throws IOException {
 		synchronized (lock) {
@@ -114,4 +145,5 @@ public class ExcelSheetWriter {
 			throw new RuntimeException("Failed to close workbook.", e);
 		}
 	}
+	
 }

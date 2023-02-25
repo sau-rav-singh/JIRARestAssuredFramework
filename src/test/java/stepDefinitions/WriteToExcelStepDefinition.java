@@ -2,14 +2,14 @@ package stepDefinitions;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import utilities.ExcelSheetManager;
 import utilities.ExcelSheetReader;
 import utilities.ExcelSheetWriter;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 
 /**
  * 
@@ -20,8 +20,9 @@ public class WriteToExcelStepDefinition {
 
 	private ExcelSheetReader excelSheetReader;
 	private ExcelSheetWriter excelSheetWriter;
-	
-	//Initializes a logger instance for the current class that enables logging messages to be written to a log file and console.
+
+	// Initializes a logger instance for the current class that enables logging
+	// messages to be written to a log file and console.
 	private final Logger logger = LogManager.getLogger(getClass());
 
 	/**
@@ -74,7 +75,6 @@ public class WriteToExcelStepDefinition {
 	@When("Read symbol as {string} and orderType as {string} and print the values")
 	public void read_symbol_as_and_order_type_as_and_print_the_values(String symbol, String orderType)
 			throws IOException {
-
 		if (excelSheetReader == null) {
 			throw new IllegalStateException("ExcelSheetReader is not initialized for the current thread.");
 		}
@@ -85,6 +85,7 @@ public class WriteToExcelStepDefinition {
 		System.out.println("Order Type is " + orderType);
 		excelSheetWriter.writeCell("EXCEL", symbol);
 		excelSheetWriter.closeFile();
-		logger.info("Excel File Written with "+symbol);
+		logger.info("Excel File Written with " + symbol);
 	}
+
 }

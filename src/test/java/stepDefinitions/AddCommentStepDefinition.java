@@ -27,7 +27,7 @@ public class AddCommentStepDefinition {
 	 
 	 
 	// Instance variables used throughout the step definitions
-	private final CreatePayload createPayload;
+	private final CreatePayload createPayload;//
 	private final JsonPaths jsonpaths;
 	private final SpecBuilders specBuilder;
 	private final ExcelSheetReader excelSheetReader;
