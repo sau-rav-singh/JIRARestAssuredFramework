@@ -53,30 +53,43 @@ public class TestSteps {
 		excelSheetWriter.writeCell("EXCEL", symbol);
 	}
 
-	@Then("Create the addCommentToBug payload")
-	public void createAddCommentPayload() {
-		String comment = excelSheetReader.readCell("COMMENT");
-		System.out.println("comment is " + comment);
+	@Then("Read comment as{string} to create a valid addCommentToBug payload as{string}")
+	public void createAddCommentPayload(String comment, String payloadName) {
+
+		comment = excelSheetReader.readCell(comment);
 		try {
-			updatedJsonPayload = createPayload.addCommentPayload(comment);
+			if (payloadName.equals("addCommentToBug")) {
+				updatedJsonPayload = createPayload.addCommentPayload(comment);
+			} else {
+				updatedJsonPayload = createPayload.invalidAddCommentPayload(comment);
+			}
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+	
+	@Then("Read comment as{string} to create an invalid addCommentToBug payload as{string}")
+	public void createInvalidAddCommentPayload(String comment, String payloadName) {
+
+		createAddCommentPayload(comment,payloadName);
+	}
 
 	@When("{string} request is sent with the {string} HTTP method on IssueID as {string}")
-	public void the_something_request_is_sent_with_the_something_http_method_on_issueid_something(String resource,
-			String httpMethod, String issueID) {
+	public void request_is_sent_with_http_method_on_issueid(String resource, String httpMethod, String issueID) {
 		issueID = excelSheetReader.readCell(issueID);
 		APIResources apiResource = APIResources.valueOf(resource);
 		if (httpMethod.equalsIgnoreCase("POST")) {
 			addCommentRequest = specBuilder.requestSpecification().pathParam("id", issueID).body(updatedJsonPayload)
 					.when().post(apiResource.getResource());
 		}
+	}
+
+	@When("the {string} request is sent with the {string} HTTP method on a non-existing IssueID as {string}")
+	public void the_request_is_sent_with_the_http_method_on_a_non_existing_issue_id_as(String resource,
+			String httpMethod, String issueID) {
+		request_is_sent_with_http_method_on_issueid(resource, httpMethod, issueID);
 	}
 
 	@Then("Validate that the response status code is {string}")
