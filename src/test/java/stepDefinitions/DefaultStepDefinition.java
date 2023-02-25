@@ -5,7 +5,7 @@ import utilities.ExcelSheetManager;
 import utilities.ExcelSheetReader;
 import utilities.ExcelSheetWriter;
 
-public class DefaultTestSteps {
+public class DefaultStepDefinition {
 
 	 @Given("A Workbook named {string} and sheetname as{string} and Row number as{int} is read")
 	    public void a_workbook_with_name_and_sub_sheet_name_and_row_number_is_read(String workbookName, String subSheetName, int rowNumber) throws Exception {

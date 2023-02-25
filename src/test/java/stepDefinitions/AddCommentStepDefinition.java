@@ -20,37 +20,21 @@ import utilities.ExcelSheetWriter;
 import utilities.JsonPaths;
 import utilities.SpecBuilders;
 
-public class TestSteps {
+public class AddCommentStepDefinition {
 
 	private final CreatePayload createPayload;
 	private final JsonPaths jsonpaths;
 	private final SpecBuilders specBuilder;
 	private final ExcelSheetReader excelSheetReader;
-	private final ExcelSheetWriter excelSheetWriter;
 	private String updatedJsonPayload;
 	private String postResponse;
 	private Response addCommentRequest;
 
-	public TestSteps() {
+	public AddCommentStepDefinition() {
 		createPayload = new CreatePayload();
 		specBuilder = new SpecBuilders();
 		excelSheetReader = ExcelSheetManager.getExcelSheetReader();
-		excelSheetWriter = ExcelSheetManager.getExcelSheetWriter();
 		jsonpaths = new JsonPaths();
-	}
-
-	@When("Read symbol as {string} and orderType as {string} and print the values")
-	public void read_symbol_as_and_order_type_as_and_print_the_values(String symbol, String orderType)
-			throws IOException {
-
-		if (excelSheetReader == null) {
-			throw new IllegalStateException("ExcelSheetReader is not initialized for the current thread.");
-		}
-		symbol = excelSheetReader.readCell(symbol);
-		orderType = excelSheetReader.readCell(orderType);
-		System.out.println("Symbol is " + symbol);
-		System.out.println("Order Type  is " + orderType);
-		excelSheetWriter.writeCell("EXCEL", symbol);
 	}
 
 	@Then("Read comment as{string} to create a valid addCommentToBug payload as{string}")
@@ -112,11 +96,6 @@ public class TestSteps {
 			Assert.assertEquals(expectedValue, actualValue);
 		}
 		String idFromJSON = js.get("id");
-		try {
-			excelSheetWriter.writeCell("ID", idFromJSON);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		excelSheetWriter.closeFile();
+		System.out.println("Issue Created is "+idFromJSON);
 	}
 }

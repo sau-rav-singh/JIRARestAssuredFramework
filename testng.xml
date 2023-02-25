@@ -2,7 +2,7 @@
 <suite name="My Test Suite" parallel="tests" thread-count="3">
 	 <test name="Read Data">
     <classes>
-      <class name="TestRunner.ReadDataTest"/>
+      <class name="TestRunner.ReadWriteToExcelTest"/>
     </classes>
   </test>
   <test name="Add Comment Test">
