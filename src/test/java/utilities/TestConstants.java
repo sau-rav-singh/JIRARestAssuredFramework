@@ -11,7 +11,7 @@ public final class TestConstants {
     /**
      * The directory where log files are stored.
      */
-    public static final String LOG_FILE_PATH = "src/test/resources/logs/";
+    public static final String LOG_FILE_PATH = "logs/";
 
     /**
      * The directory where test data files are stored.

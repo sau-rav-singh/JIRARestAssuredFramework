@@ -3,10 +3,8 @@ package stepDefinitions;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-
 import org.json.JSONException;
 import org.testng.Assert;
-
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,9 +16,16 @@ import utilities.ExcelSheetManager;
 import utilities.ExcelSheetReader;
 import utilities.JsonPaths;
 import utilities.SpecBuilders;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class AddCommentStepDefinition {
 
+	// Initializes a logger instance for the current class that enables logging
+	// messages to be written to a log file and console.
+	private final Logger logger = LogManager.getLogger(getClass());
+	 
+	 
 	// Instance variables used throughout the step definitions
 	private final CreatePayload createPayload;
 	private final JsonPaths jsonpaths;
@@ -90,6 +95,7 @@ public class AddCommentStepDefinition {
 	 */
 	@When("{string} request is sent with the {string} HTTP method on IssueID as {string}")
 	public void request_is_sent_with_http_method_on_issueid(String resource, String httpMethod, String issueID) {
+		
 		issueID = excelSheetReader.readCell(issueID);
 		APIResources apiResource = APIResources.valueOf(resource);
 		if (httpMethod.equalsIgnoreCase("POST")) {
@@ -108,6 +114,7 @@ public class AddCommentStepDefinition {
 	@When("the {string} request is sent with the {string} HTTP method on a non-existing IssueID as {string}")
 	public void the_request_is_sent_with_the_http_method_on_a_non_existing_issue_id_as(String resource,
 			String httpMethod, String issueID) {
+		
 		request_is_sent_with_http_method_on_issueid(resource, httpMethod, issueID);
 	}
 
@@ -118,6 +125,7 @@ public class AddCommentStepDefinition {
 	 */
 	@Then("Validate that the response status code is {string}")
 	public void the_response_status_code_should_be_something(String responseCode) {
+		
 		postResponse = specBuilder.responseSpecification(addCommentRequest).statusCode(Integer.parseInt(responseCode))
 				.extract().response().body().asString();
 	}
@@ -127,19 +135,22 @@ public class AddCommentStepDefinition {
 	 * 
 	 * @param dataTable the table of fields and expected values
 	 */
+	
 	@Then("Validate the following fields from the response:")
 	public void validate_the_following_fields_from_the_response(DataTable dataTable) {
+		
 		JsonPath js = new JsonPath(postResponse);
+		
 		List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+		
 		for (Map<String, String> row : rows) {
 			String field = row.get("Field");
 			String expectedValue = excelSheetReader.readCell(row.get("Value"));
-			System.out.println("field is " + field);
-			System.out.println("expectedValue is " + expectedValue);
 			String actualValue = js.get(jsonpaths.getJsonPathForField(field));
 			Assert.assertEquals(expectedValue, actualValue);
 		}
+		
 		String idFromJSON = js.get("id");
-		System.out.println("Issue Created is " + idFromJSON);
+		 logger.info("Issue Created is " + idFromJSON);
 	}
 }

@@ -1,0 +1,20 @@
+2023-02-25 17:37:53,412 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 17:37:53,659 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 17:37:58,525 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10553
+2023-02-25 17:37:59,584 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10554
+2023-02-25 17:38:00,514 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10555
+2023-02-25 17:41:48,804 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 17:41:48,987 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 17:41:57,152 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RequestSpecificationImpl@6732726
+2023-02-25 17:41:59,476 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RestAssuredResponseImpl@7ac48e10
+2023-02-25 17:42:00,610 [main] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10557
+2023-02-25 17:42:00,799 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RequestSpecificationImpl@5df92089
+2023-02-25 17:42:01,493 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RestAssuredResponseImpl@5817f1ca
+2023-02-25 17:42:01,675 [main] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10558
+2023-02-25 17:42:01,827 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RequestSpecificationImpl@3866c96e
+2023-02-25 17:42:02,561 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RestAssuredResponseImpl@efe49ab
+2023-02-25 17:42:02,792 [main] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10559
+2023-02-25 17:42:02,962 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RequestSpecificationImpl@329b331f
+2023-02-25 17:42:03,613 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RestAssuredResponseImpl@36525ab
+2023-02-25 17:42:03,761 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RequestSpecificationImpl@7bf65e0f
+2023-02-25 17:42:04,320 [main] INFO  utilities.SpecBuilders - io.restassured.internal.RestAssuredResponseImpl@5f3f3d00
