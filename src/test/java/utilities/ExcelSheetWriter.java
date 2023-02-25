@@ -18,6 +18,16 @@ public class ExcelSheetWriter {
 	private final FileOutputStream fos;
 	private static final Object lock = new Object();
 
+	/**
+	 * Constructs a new ExcelSheetWriter for the specified workbook and sheet.
+	 *
+	 * @param workbookName the name of the workbook file
+	 * @param sheetName the name of the sheet within the workbook
+	 * @param rowNumber the zero-based index of the row to write data to
+	 * @throws IOException if an I/O error occurs while reading or writing the workbook
+	 * @throws NullPointerException if either workbookName or sheetName is null
+	 * @throws IllegalArgumentException if rowNumber is negative, or if the sheet does not exist in the workbook
+	 */
 	public ExcelSheetWriter(String workbookName, String sheetName, int rowNumber) throws IOException {
 		Objects.requireNonNull(workbookName, "Workbook name cannot be null.");
 		Objects.requireNonNull(sheetName, "Sheet name cannot be null.");
@@ -36,6 +46,15 @@ public class ExcelSheetWriter {
 		fos = new FileOutputStream(filePath);
 	}
 
+	/**
+	 * Writes a value to the specified column in the row being written to.
+	 *
+	 * @param columnName the name of the column to write to
+	 * @param value the value to write
+	 * @throws IOException if an I/O error occurs while writing to the workbook
+	 * @throws NullPointerException if either columnName or value is null
+	 * @throws IllegalArgumentException if the column name is empty or blank, or if the column does not exist in the sheet
+	 */
 	public void writeCell(String columnName, String value) throws IOException {
 		Objects.requireNonNull(columnName, "Column name cannot be null.");
 		Objects.requireNonNull(value, "Value cannot be null.");
