@@ -23,9 +23,9 @@ public class SpecBuilders {
 
 		String logFileName = TestConstants.LOG_FILE_PATH + "TestLogs_" + getCurrentDate() + ".txt";
 
-		try (PrintStream log = new PrintStream(new FileOutputStream(logFileName, true))) {
+		try (PrintStream log = new PrintStream(new FileOutputStream(logFileName))) {
 			RequestSpecification authRequest = RestAssured.given().baseUri(readConfigProperties("baseUrl"))
-					.filters(RequestLoggingFilter.logRequestTo(log)).filters(ResponseLoggingFilter.logResponseTo(log))
+					.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log))
 					.auth().preemptive().basic("singh.saurav@icloud.com", readConfigProperties("token"))
 					.header("Content-type", "application/json");
 			return authRequest;
