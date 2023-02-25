@@ -78,7 +78,7 @@ public class AddCommentStepDefinition {
 	@Then("Validate that the response status code is {string}")
 	public void the_response_status_code_should_be_something(String responseCode) {
 
-		postResponse = addCommentRequest.then().spec(specBuilder.responseSpecification())
+		postResponse = specBuilder.responseSpecification(addCommentRequest)
 				.statusCode(Integer.parseInt(responseCode)).extract().response().body().asString();
 	}
 

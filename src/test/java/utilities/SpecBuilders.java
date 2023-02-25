@@ -14,6 +14,8 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
@@ -26,6 +28,7 @@ public class SpecBuilders {
 		try (PrintStream log = new PrintStream(new FileOutputStream(logFileName))) {
 			RequestSpecification authRequest = RestAssured.given().baseUri(readConfigProperties("baseUrl"))
 					.filter(RequestLoggingFilter.logRequestTo(log)).filter(ResponseLoggingFilter.logResponseTo(log))
+					.log().all()
 					.auth().preemptive().basic("singh.saurav@icloud.com", readConfigProperties("token"))
 					.header("Content-type", "application/json");
 			return authRequest;
@@ -34,9 +37,10 @@ public class SpecBuilders {
 		}
 	}
 
-	public ResponseSpecification responseSpecification() {
-
-		return new ResponseSpecBuilder().expectContentType(ContentType.JSON).build();
+	public ValidatableResponse responseSpecification(Response response ) {
+		
+	return	response.then().spec(new ResponseSpecBuilder().expectContentType(ContentType.JSON).build()).log().all();
+		
 	}
 
 	private String getCurrentDate() {
