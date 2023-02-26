@@ -99,7 +99,7 @@ public class AddCommentStepDefinition {
 		issueID = excelSheetReader.readCell(issueID);
 		APIResources apiResource = APIResources.valueOf(resource);
 		if (httpMethod.equalsIgnoreCase("POST")) {
-			addCommentRequest = specBuilder.requestSpecification().pathParam("id", issueID).body(updatedJsonPayload)
+			addCommentRequest = specBuilder.requestSpecification(updatedJsonPayload).pathParam("id", issueID)	
 					.when().post(apiResource.getResource());
 		}
 	}

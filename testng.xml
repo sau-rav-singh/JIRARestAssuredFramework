@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="My Test Suite" parallel="tests" thread-count="3">
+	 <listeners>
+        <listener class-name="reporting.ExtentReportConfig"></listener>
+    </listeners>
 	 <test name="Read Data">
     <classes>
       <class name="TestRunner.ReadWriteToExcelTest"/>

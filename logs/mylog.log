@@ -31,3 +31,113 @@
 2023-02-25 18:07:38,117 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
 2023-02-25 18:08:23,942 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
 2023-02-25 18:08:24,135 [main] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:26:14,824 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:26:15,190 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:26:20,898 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10565
+2023-02-25 18:26:22,057 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10566
+2023-02-25 18:26:23,009 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10567
+2023-02-25 18:28:57,604 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:28:58,243 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:29:04,960 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10569
+2023-02-25 18:29:05,982 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10570
+2023-02-25 18:29:07,112 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10571
+2023-02-25 18:29:44,649 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:29:45,061 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:29:54,885 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10573
+2023-02-25 18:29:56,242 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10574
+2023-02-25 18:29:57,334 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10575
+2023-02-25 18:31:57,625 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:31:57,939 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:32:02,474 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10577
+2023-02-25 18:32:03,478 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10578
+2023-02-25 18:32:04,425 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10579
+2023-02-25 18:41:11,113 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:41:11,389 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:41:16,293 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10581
+2023-02-25 18:41:17,380 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10582
+2023-02-25 18:41:18,300 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10583
+2023-02-25 18:43:02,331 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:43:02,571 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:43:07,378 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10585
+2023-02-25 18:43:08,382 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10586
+2023-02-25 18:43:09,321 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10587
+2023-02-25 18:46:41,914 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-25 18:46:42,156 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-25 18:46:46,757 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10589
+2023-02-25 18:46:47,951 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10590
+2023-02-25 18:46:48,943 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10591
+2023-02-26 18:40:54,356 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 18:40:54,608 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 18:40:59,805 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10593
+2023-02-26 18:41:00,959 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10594
+2023-02-26 18:41:02,073 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10595
+2023-02-26 18:49:10,001 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 18:49:10,458 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 18:49:21,747 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10597
+2023-02-26 18:49:22,999 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10598
+2023-02-26 18:49:24,176 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10599
+2023-02-26 18:50:25,367 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 18:50:25,818 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 18:50:35,087 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10601
+2023-02-26 18:50:36,444 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10602
+2023-02-26 18:50:37,708 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10603
+2023-02-26 18:52:26,761 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 18:52:27,198 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 18:52:39,458 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10605
+2023-02-26 18:52:40,925 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10606
+2023-02-26 18:52:42,263 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10607
+2023-02-26 18:53:36,000 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 18:53:36,769 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 18:53:48,178 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10609
+2023-02-26 18:53:49,885 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10610
+2023-02-26 18:53:51,290 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10611
+2023-02-26 18:58:17,088 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 18:58:17,835 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 18:58:28,372 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10613
+2023-02-26 18:58:29,573 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10614
+2023-02-26 18:58:30,541 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10615
+2023-02-26 18:58:50,958 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 18:58:51,554 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 18:59:03,592 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10617
+2023-02-26 18:59:05,114 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10618
+2023-02-26 18:59:06,340 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10619
+2023-02-26 19:00:16,860 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:00:17,095 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:00:22,407 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10621
+2023-02-26 19:00:23,650 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10622
+2023-02-26 19:00:24,889 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10623
+2023-02-26 19:09:42,394 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:09:43,144 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:09:58,215 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10625
+2023-02-26 19:09:59,917 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10626
+2023-02-26 19:10:00,834 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10627
+2023-02-26 19:10:33,983 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:10:34,400 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:12:02,361 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10629
+2023-02-26 19:12:04,299 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10630
+2023-02-26 19:12:05,602 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10631
+2023-02-26 19:14:12,450 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:14:12,869 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:14:25,466 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10633
+2023-02-26 19:14:26,962 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10634
+2023-02-26 19:14:28,526 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10635
+2023-02-26 19:17:05,069 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:17:05,273 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:17:09,967 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10637
+2023-02-26 19:17:10,907 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10638
+2023-02-26 19:17:11,846 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10639
+2023-02-26 19:27:12,865 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:27:13,670 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:27:27,748 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10641
+2023-02-26 19:27:29,426 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10642
+2023-02-26 19:27:30,845 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10643
+2023-02-26 19:28:28,220 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:28:28,689 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:28:43,911 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10645
+2023-02-26 19:28:45,631 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10646
+2023-02-26 19:28:47,682 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10647
+2023-02-26 19:29:45,335 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with AAPL
+2023-02-26 19:29:45,735 [TestNG-tests-1] INFO  stepDefinitions.WriteToExcelStepDefinition - Excel File Written with IBM
+2023-02-26 19:29:57,646 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10649
+2023-02-26 19:29:58,988 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10650
+2023-02-26 19:30:00,667 [TestNG-tests-2] INFO  stepDefinitions.AddCommentStepDefinition - Issue Created is 10651
