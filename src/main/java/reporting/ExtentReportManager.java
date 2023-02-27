@@ -12,6 +12,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.restassured.http.Header;
+import listeners.ExtentReportConfigListener;
 
 
 public class ExtentReportManager {
@@ -38,28 +39,28 @@ public class ExtentReportManager {
     }
 
     public static void logPassDetails(String log) {
-        ExtentReportConfig.extentTest.get().pass(MarkupHelper.createLabel(log, ExtentColor.GREEN));
+        ExtentReportConfigListener.extentTest.get().pass(MarkupHelper.createLabel(log, ExtentColor.GREEN));
     }
     public static void logFailureDetails(String log) {
-        ExtentReportConfig.extentTest.get().fail(MarkupHelper.createLabel(log, ExtentColor.RED));
+        ExtentReportConfigListener.extentTest.get().fail(MarkupHelper.createLabel(log, ExtentColor.RED));
     }
     public static void logExceptionDetails(String log) {
-        ExtentReportConfig.extentTest.get().fail(log);
+        ExtentReportConfigListener.extentTest.get().fail(log);
     }
     public static void logInfoDetails(String log) {
-        ExtentReportConfig.extentTest.get().info(MarkupHelper.createLabel(log, ExtentColor.GREY));
+        ExtentReportConfigListener.extentTest.get().info(MarkupHelper.createLabel(log, ExtentColor.GREY));
     }
     public static void logWarningDetails(String log) {
-        ExtentReportConfig.extentTest.get().warning(MarkupHelper.createLabel(log, ExtentColor.YELLOW));
+        ExtentReportConfigListener.extentTest.get().warning(MarkupHelper.createLabel(log, ExtentColor.YELLOW));
     }
     public static void logJson(String json) {
-        ExtentReportConfig.extentTest.get().info(MarkupHelper.createCodeBlock(json, CodeLanguage.JSON));
+        ExtentReportConfigListener.extentTest.get().info(MarkupHelper.createCodeBlock(json, CodeLanguage.JSON));
     }
     public static void logHeaders(List<Header> headersList) {
 
         String[][] arrayHeaders = headersList.stream().map(header -> new String[] {header.getName(), header.getValue()})
                         .toArray(String[][] :: new);
-        ExtentReportConfig.extentTest.get().info(MarkupHelper.createTable(arrayHeaders));
+        ExtentReportConfigListener.extentTest.get().info(MarkupHelper.createTable(arrayHeaders));
     }
     
 }

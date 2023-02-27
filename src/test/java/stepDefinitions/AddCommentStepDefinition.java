@@ -14,11 +14,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import utilities.CreatePayload;
-import utilities.ExcelSheetManager;
-import utilities.ExcelSheetReader;
-import utilities.JsonPaths;
-import utilities.SpecBuilders;
+import testUtilities.CreatePayload;
+import testUtilities.ExcelSheetManager;
+import testUtilities.ExcelSheetReader;
+import testUtilities.JsonPaths;
+import testUtilities.SpecBuilders;
 
 public class AddCommentStepDefinition {
 

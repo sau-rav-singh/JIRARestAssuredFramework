@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="My Test Suite" parallel="tests" thread-count="3">
 	 <listeners>
-        <listener class-name="reporting.ExtentReportConfig"></listener>
-        <listener class-name="utilities.MySuiteListener"></listener>
+        <listener class-name="listeners.ExtentReportConfigListener"></listener>
+        <listener class-name="listeners.MySuiteListener"></listener>
     </listeners>
 	 <test name="Read Data">
     <classes>

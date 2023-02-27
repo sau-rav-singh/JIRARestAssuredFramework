@@ -1,4 +1,4 @@
-package reporting;
+package listeners;
 
 import java.util.Arrays;
 
@@ -8,7 +8,9 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-public class ExtentReportConfig implements ITestListener {
+import reporting.ExtentReportManager;
+
+public class ExtentReportConfigListener implements ITestListener {
 
 	private static ExtentReports extentReports;
 	public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();

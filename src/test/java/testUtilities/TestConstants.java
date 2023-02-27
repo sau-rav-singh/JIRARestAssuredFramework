@@ -1,4 +1,4 @@
-package utilities;
+package testUtilities;
 
 /**
  * The TestConstants class contains static final string constants that are used by tests in the project.

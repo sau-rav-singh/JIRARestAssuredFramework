@@ -1,4 +1,4 @@
-package utilities;
+package testUtilities;
 
 /**
  * This enum contains the available API resources with their endpoint paths.

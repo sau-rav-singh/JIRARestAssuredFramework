@@ -1,8 +1,8 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.Given;
-import utilities.ExcelSheetManager;
-import utilities.ExcelSheetReader;
+import testUtilities.ExcelSheetManager;
+import testUtilities.ExcelSheetReader;
 
 public class DefaultStepDefinition {
 

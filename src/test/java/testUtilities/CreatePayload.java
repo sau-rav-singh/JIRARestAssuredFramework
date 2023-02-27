@@ -3,7 +3,7 @@
  * These utility classes are designed to make tests easier to write and maintain, and to promote code reuse throughout
  * the project.
  */
-package utilities;
+package testUtilities;
 
 import java.io.IOException;
 import java.nio.file.Files;

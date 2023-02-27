@@ -7,9 +7,9 @@ import org.apache.logging.log4j.Logger;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import utilities.ExcelSheetManager;
-import utilities.ExcelSheetReader;
-import utilities.ExcelSheetWriter;
+import testUtilities.ExcelSheetManager;
+import testUtilities.ExcelSheetReader;
+import testUtilities.ExcelSheetWriter;
 
 /**
  * 
