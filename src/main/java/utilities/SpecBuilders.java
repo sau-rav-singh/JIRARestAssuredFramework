@@ -17,7 +17,7 @@ import reporting.ExtentReportManager;
 public class SpecBuilders {
 
 
-	public RequestSpecification requestSpecification() {
+	public static RequestSpecification requestSpecification() {
 
 		RequestSpecification authRequest = RestAssured.given().baseUri(readConfigProperties("baseUrl")).auth()
 				.preemptive().basic("singh.saurav@icloud.com", readConfigProperties("token"))
@@ -26,26 +26,33 @@ public class SpecBuilders {
 		return authRequest;
 	}
 	
-	public RequestSpecification requestSpecification(String requestPayload) {
+	public static RequestSpecification requestSpecification(String requestPayload,String issueID) {
 
 		RequestSpecification authRequest = RestAssured.given().baseUri(readConfigProperties("baseUrl")).auth()
 				.preemptive().basic("singh.saurav@icloud.com", readConfigProperties("token"))
-				.header("Content-type", "application/json").body(requestPayload);
-		
-		printRequestLogInReport(authRequest);
+				.header("Content-type", "application/json").body(requestPayload).pathParam("id", issueID);
 		
 		return authRequest;
 	}
 
-	public ValidatableResponse responseSpecification(Response response) {
+	public static ValidatableResponse responseSpecification(Response response) {
 
-		printResponseLogInReport(response);
-		return response.then().spec(new ResponseSpecBuilder().expectContentType(ContentType.JSON).build()).log().all();
+		return response.then().spec(new ResponseSpecBuilder().expectContentType(ContentType.JSON).build());
 
 	}
 
+	public static Response SendPostAndReturnResponse(String updatedJsonPayload,String issueID,String resource ) {
+		APIResources apiResource = APIResources.valueOf(resource);
+		RequestSpecification requestSpecification = requestSpecification(updatedJsonPayload,issueID);
+		Response addCommentResponse =  requestSpecification.when()
+					.post(apiResource.getResource());
+		
+		 SpecBuilders.printRequestLogInReport(requestSpecification);
+		 SpecBuilders.printResponseLogInReport(addCommentResponse);
+		 return addCommentResponse;
+	}
 	
-	private String readConfigProperties(String key) {
+	private static String readConfigProperties(String key) {
 		Properties prop = new Properties();
 		try (FileInputStream input = new FileInputStream(TestConstants.CONFIG_PROPERTIES_PATH)) {
 			prop.load(input);

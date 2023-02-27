@@ -3,21 +3,22 @@ package stepDefinitions;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.JSONException;
 import org.testng.Assert;
+
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import utilities.APIResources;
 import utilities.CreatePayload;
 import utilities.ExcelSheetManager;
 import utilities.ExcelSheetReader;
 import utilities.JsonPaths;
 import utilities.SpecBuilders;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
 
 public class AddCommentStepDefinition {
 
@@ -28,15 +29,13 @@ public class AddCommentStepDefinition {
 	// Instance variables used throughout the step definitions
 	private final CreatePayload createPayload;//
 	private final JsonPaths jsonpaths;
-	private final SpecBuilders specBuilder;
 	private final ExcelSheetReader excelSheetReader;
 	private String updatedJsonPayload;
 	private String postResponse;
-	private Response addCommentRequest;
+	private Response addCommentResponse;
 
 	public AddCommentStepDefinition() {
 		createPayload = new CreatePayload();
-		specBuilder = new SpecBuilders();
 		excelSheetReader = ExcelSheetManager.getExcelSheetReader();
 		jsonpaths = new JsonPaths();
 	}
@@ -71,10 +70,9 @@ public class AddCommentStepDefinition {
 	public void request_is_sent_with_http_method_on_issueid(String resource, String httpMethod, String issueID) {
 
 		issueID = excelSheetReader.readCell(issueID);
-		APIResources apiResource = APIResources.valueOf(resource);
+		
 		if (httpMethod.equalsIgnoreCase("POST")) {
-			addCommentRequest = specBuilder.requestSpecification(updatedJsonPayload).pathParam("id", issueID).when()
-					.post(apiResource.getResource());
+			addCommentResponse=SpecBuilders.SendPostAndReturnResponse(updatedJsonPayload,issueID,resource);
 		}
 	}
 
@@ -88,7 +86,7 @@ public class AddCommentStepDefinition {
 	@Then("Validate that the response status code is {string}")
 	public void the_response_status_code_should_be_something(String responseCode) {
 
-		postResponse = specBuilder.responseSpecification(addCommentRequest).statusCode(Integer.parseInt(responseCode))
+		postResponse = SpecBuilders.responseSpecification(addCommentResponse).statusCode(Integer.parseInt(responseCode))
 				.extract().response().body().asString();
 	}
 
