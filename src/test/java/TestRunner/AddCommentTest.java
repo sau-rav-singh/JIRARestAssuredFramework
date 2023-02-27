@@ -1,7 +1,11 @@
 package TestRunner;
 
+import org.testng.annotations.Listeners;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+
+@Listeners({utilities.MySuiteListener.class,reporting.ExtentReportConfig.class})
 
 @CucumberOptions(features = "src/test/java/features/addComment.feature", plugin = { "pretty",
 		"json:target/jsonReports/cucumber-report.json" }, glue = { "stepDefinitions" })
