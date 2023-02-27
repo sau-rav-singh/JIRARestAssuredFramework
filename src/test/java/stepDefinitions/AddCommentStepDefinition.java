@@ -24,8 +24,7 @@ public class AddCommentStepDefinition {
 	// Initializes a logger instance for the current class that enables logging
 	// messages to be written to a log file and console.
 	private final Logger logger = LogManager.getLogger(getClass());
-	 
-	 
+
 	// Instance variables used throughout the step definitions
 	private final CreatePayload createPayload;//
 	private final JsonPaths jsonpaths;
@@ -35,10 +34,6 @@ public class AddCommentStepDefinition {
 	private String postResponse;
 	private Response addCommentRequest;
 
-	/**
-	 * Constructor that initializes the CreatePayload, JsonPaths, SpecBuilders, and
-	 * ExcelSheetReader instances.
-	 */
 	public AddCommentStepDefinition() {
 		createPayload = new CreatePayload();
 		specBuilder = new SpecBuilders();
@@ -46,13 +41,6 @@ public class AddCommentStepDefinition {
 		jsonpaths = new JsonPaths();
 	}
 
-	/**
-	 * Step definition for creating a valid addCommentToBug payload with the
-	 * specified comment and payload name.
-	 * 
-	 * @param comment     the comment to add to the bug
-	 * @param payloadName the name of the payload to create
-	 */
 	@Then("Read comment as{string} to create a valid addCommentToBug payload as{string}")
 	public void createAddCommentPayload(String comment, String payloadName) {
 
@@ -72,13 +60,6 @@ public class AddCommentStepDefinition {
 		}
 	}
 
-	/**
-	 * Step definition for creating an invalid addCommentToBug payload with the
-	 * specified comment and payload name.
-	 * 
-	 * @param comment     the comment to add to the bug
-	 * @param payloadName the name of the payload to create
-	 */
 	@Then("Read comment as{string} to create an invalid addCommentToBug payload as{string}")
 	public void createInvalidAddCommentPayload(String comment, String payloadName) {
 
@@ -86,71 +67,46 @@ public class AddCommentStepDefinition {
 		createAddCommentPayload(comment, payloadName);
 	}
 
-	/**
-	 * Sends a POST request to add a comment to an existing issue.
-	 * 
-	 * @param resource   the name of the API resource
-	 * @param httpMethod the HTTP method for the request
-	 * @param issueID    the ID of the issue to add a comment to
-	 */
 	@When("{string} request is sent with the {string} HTTP method on IssueID as {string}")
 	public void request_is_sent_with_http_method_on_issueid(String resource, String httpMethod, String issueID) {
-		
+
 		issueID = excelSheetReader.readCell(issueID);
 		APIResources apiResource = APIResources.valueOf(resource);
 		if (httpMethod.equalsIgnoreCase("POST")) {
-			addCommentRequest = specBuilder.requestSpecification(updatedJsonPayload).pathParam("id", issueID)	
-					.when().post(apiResource.getResource());
+			addCommentRequest = specBuilder.requestSpecification(updatedJsonPayload).pathParam("id", issueID).when()
+					.post(apiResource.getResource());
 		}
 	}
 
-	/**
-	 * Sends a request with a non-existing issue ID and the specified HTTP method.
-	 * 
-	 * @param resource   the name of the API resource
-	 * @param httpMethod the HTTP method for the request
-	 * @param issueID    the ID of the non-existing issue
-	 */
 	@When("the {string} request is sent with the {string} HTTP method on a non-existing IssueID as {string}")
 	public void the_request_is_sent_with_the_http_method_on_a_non_existing_issue_id_as(String resource,
 			String httpMethod, String issueID) {
-		
+
 		request_is_sent_with_http_method_on_issueid(resource, httpMethod, issueID);
 	}
 
-	/**
-	 * Validates that the response status code matches the expected code.
-	 * 
-	 * @param responseCode the expected status code
-	 */
 	@Then("Validate that the response status code is {string}")
 	public void the_response_status_code_should_be_something(String responseCode) {
-		
+
 		postResponse = specBuilder.responseSpecification(addCommentRequest).statusCode(Integer.parseInt(responseCode))
 				.extract().response().body().asString();
 	}
 
-	/**
-	 * Validates the values of fields in the response JSON.
-	 * 
-	 * @param dataTable the table of fields and expected values
-	 */
-	
 	@Then("Validate the following fields from the response:")
 	public void validate_the_following_fields_from_the_response(DataTable dataTable) {
-		
+
 		JsonPath js = new JsonPath(postResponse);
-		
+
 		List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
-		
+
 		for (Map<String, String> row : rows) {
 			String field = row.get("Field");
 			String expectedValue = excelSheetReader.readCell(row.get("Value"));
 			String actualValue = js.get(jsonpaths.getJsonPathForField(field));
 			Assert.assertEquals(expectedValue, actualValue);
 		}
-		
+
 		String idFromJSON = js.get("id");
-		 logger.info("Issue Created is " + idFromJSON);
+		logger.info("Issue Created is " + idFromJSON);
 	}
 }
