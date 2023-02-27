@@ -66,7 +66,7 @@ public class AddCommentStepDefinition {
 		createAddCommentPayload(comment, payloadName);
 	}
 
-	@When("{string} request is sent with the {string} HTTP method on IssueID as {string}")
+	@When("The {string} request is sent with the {string} HTTP method on IssueID as {string}")
 	public void request_is_sent_with_http_method_on_issueid(String resource, String httpMethod, String issueID) {
 
 		issueID = excelSheetReader.readCell(issueID);
@@ -76,7 +76,7 @@ public class AddCommentStepDefinition {
 		}
 	}
 
-	@When("the {string} request is sent with the {string} HTTP method on a non-existing IssueID as {string}")
+	@When("The {string} request is sent with the {string} HTTP method on a non-existing IssueID as {string}")
 	public void the_request_is_sent_with_the_http_method_on_a_non_existing_issue_id_as(String resource,
 			String httpMethod, String issueID) {
 
