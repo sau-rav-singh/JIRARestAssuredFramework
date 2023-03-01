@@ -1,0 +1,21 @@
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.JsonNode;
+
+// your JSON string
+String jsonString = "{ \"name\": \"John\", \"age\": 30, \"city\": \"New York\" }";
+
+// create an ObjectMapper object
+ObjectMapper objectMapper = new ObjectMapper();
+
+// read the JSON string into a JsonNode object
+JsonNode jsonNode = objectMapper.readTree(jsonString);
+
+// create an ObjectWriter with the pretty printer enabled
+ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
+
+// use the ObjectWriter to write the JsonNode as a pretty-printed JSON string
+String prettyJsonString = objectWriter.writeValueAsString(jsonNode);
+
+// print the pretty-printed JSON string
+System.out.println(prettyJsonString);
